@@ -65,29 +65,29 @@ export const formTemplateRegister = () => {
   return divFormRegister;
 };
 
-export async function loginSubmit() {
-  const userName = document.getElementById("name").value;
-  const userEmail = document.getElementById("email").value;
-  const userPassword = document.getElementById("password").value;
-  try {
-    const login = await userCreate(userEmail, userPassword);
-    console.log(login.user, "que tal");
-    emailVerificate();
-    const userToCreateForm = {
-      nombre: userName,
-      correo: userEmail,
-      foto: "./images/logos/favicon.png",
-      id: login.user.uid,
-    };
-    await userDataBase(userToCreateForm, collectionUser);
-    sessionStorage.setItem("user", JSON.stringify(userToCreateForm));
-    const datoGuardado = userDataLocally();
-    console.log("usuario guardado en formulario: ", datoGuardado);
-
-    return login.user;
-  } catch (err) {
-    console.log(err);
-  }
+ export  async function loginSubmit(){        
+    const userName =document.getElementById("name").value;
+    const userEmail = document.getElementById("email").value;
+    const userPassword = document.getElementById("password").value;
+    try {
+    const login = await  userCreate(userEmail, userPassword);
+      console.log(login.user ,'que tal')
+      emailVerificate();
+      const userToCreateForm = {
+        nombre: userName,
+        correo: userEmail,
+        foto: "./images/ramdom_pictures/img-modal.png",
+        id: login.user.uid
+      };
+      await userDataBase(userToCreateForm,collectionUser);
+      sessionStorage.setItem('user', JSON.stringify(userToCreateForm));
+      const datoGuardado = userDataLocally();
+      console.log('usuario guardado en formulario: ', datoGuardado);
+      
+      return login.user
+    }
+    catch(err){
+    console.log(err)}      
 }
 
 export const register = () => {
