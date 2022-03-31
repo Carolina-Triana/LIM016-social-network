@@ -6,11 +6,9 @@ export const emailConfirm = () => {
     <div class="imageMail">
     <img class ='emailGif'src="./images/background/message.gif" alt="email gif"></img>
     </div>
-    <p class="redirect">Si ingresaste un correo al que no tienes acceso.</p><a class="redirect" href='#/registro'> Haz click aqui</a>
+    <p class="redirect">Si ingresaste un correo al que no tienes acceso.</p><a class="redirect" href='#/register'> Haz click aqui</a>
     </section>
     `
     const divMessage = document.createElement('div');
-    divMessage.innerHTML = emailConfirm;
-    //window.location.hash = '#/timeline';
-    
+    divMessage.innerHTML = emailConfirm;  
     return divMessage}

@@ -80,7 +80,7 @@ async function loginUser() {
   const passwordValue = document.getElementById("password").value;
   try {
     const login = await loginWithEmailAndPassword(emailValue, passwordValue);
-    console.log('user : ', login.user);
+    console.log('user : ', login);
     if (login.user.emailVerified === true) {
 
      const user = await findingUser(login.user.uid, collectionUser);

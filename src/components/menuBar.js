@@ -1,16 +1,3 @@
-/*import { logut } from "../firebase/auth.js"
-export const btnsign = (user)  => {
-let btnSignOut = document.getElementById(user)
-btnSignOut.addEventListener("click",async () => {
-    try{ let functionLogut= await logut()
-        window.location.hash = '#/';
-         return functionLogut
-   }catch{
-       console.log("no se sale")
-   }    
-})
-}*/
-
 export const menuBar = () => {
     const templateMenuBar = `
     <div id="icons-menu" class="icons-menu">

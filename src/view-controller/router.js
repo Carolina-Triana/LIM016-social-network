@@ -27,8 +27,8 @@ export const componentsViews = (hash) => {
             functionBtnReset()
             break;
         case '#/verification':
+            main.appendChild(components.Header(""));
             main.appendChild(components.Message());
-            main.appendChild(components.Header());
             break;
         case '#/timeline':
             main.appendChild(components.Timeline(components.MenuBar(),components.SectionUtils()));

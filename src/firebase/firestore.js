@@ -51,8 +51,5 @@ export const userDataBase = async (user, collection) => {
         throw new Error(error);
 
     }
-};//esta tambien ls puedo refactorizar para poder guardar al click de usuario dentro de la coleccion desada CREO
-
-//export const  getUserForTimeLine = (user ) => collection(db, 'usuario').get();
-
+};
 
